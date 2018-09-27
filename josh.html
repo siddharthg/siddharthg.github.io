@@ -132,14 +132,16 @@
             clearInterval(this.timer);
         }
     };
-    $(function() {
-        YT.live.start();
-    });
+//     $(function() {
+//         YT.live.start();
+//     });
     $(document).ready(function(){
     	$(window).focus(function(){
+	    console.log('started ');
             YT.live.start();
     	});
     	$(window).blur(function(){
+            console.log('paused');
             YT.live.stop();
         });
     });
