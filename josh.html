@@ -135,6 +135,14 @@
     $(function() {
         YT.live.start();
     });
+    $(document).ready(function(){
+    	$(window).focus(function(){
+            YT.live.start();
+    	});
+    	$(window).blur(function(){
+            YT.live.stop();
+        });
+    });
 });
 	</script>
 	</body>
